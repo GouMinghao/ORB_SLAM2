@@ -23,6 +23,16 @@ cd Vocabulary
 tar -xf ORBvoc.txt.tar.gz
 cd ..
 
+echo "build Pangolin"
+cd Thirdparty/Pangolin
+mkdir build
+cd build
+cmake ..
+make -j8
+sudo make install
+cd ../../../
+
+
 echo "Configuring and building ORB_SLAM2 ..."
 
 mkdir build
